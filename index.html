@@ -786,24 +786,24 @@ body{background:var(--stone-pale);color:var(--navy);font-family:var(--sans);curs
     <h2 class="join-headline"><em>Join as a<br>Founding Member</em></h2>
     <p class="join-body">We are forming a founding group of history museums and science centers. Early participation shapes exhibition themes, standards, and the long-term content pipeline. Bring us your ideas — let's co-develop something extraordinary together.</p>
     <p class="join-note">No upfront capital required. Clear, limited commitments <strong>only</strong>.</p>
-    <form class="join-form" onsubmit="handleSubmit(event)">
+    <form class="join-form" action="https://formspree.io/f/xkoegodz" method="POST">
       <div class="form-row">
-        <div><label class="f-label">First Name</label><input class="f-input" type="text" placeholder="Your first name"></div>
-        <div><label class="f-label">Last Name</label><input class="f-input" type="text" placeholder="Your last name"></div>
+        <div><label class="f-label">First Name</label><input class="f-input" type="text" name="first_name" placeholder="Your first name"></div>
+        <div><label class="f-label">Last Name</label><input class="f-input" type="text" name="last_name" placeholder="Your last name"></div>
       </div>
-      <div><label class="f-label">Title</label><input class="f-input" type="text" placeholder="Your role at the institution"></div>
-      <div><label class="f-label">Institution</label><input class="f-input" type="text" placeholder="Museum or science center name"></div>
-      <div><label class="f-label">Email</label><input class="f-input" type="email" placeholder="your@institution.org"></div>
+      <div><label class="f-label">Title</label><input class="f-input" type="text" name="title" placeholder="Your role at the institution"></div>
+      <div><label class="f-label">Institution</label><input class="f-input" type="text" name="institution" placeholder="Museum or science center name"></div>
+      <div><label class="f-label">Email</label><input class="f-input" type="email" name="email" placeholder="your@institution.org"></div>
       <div>
         <label class="f-label">Institution Type</label>
-        <select class="f-input f-select">
+        <select class="f-input f-select" name="institution_type">
           <option value="" disabled selected>Select type</option>
           <option>History Museum</option><option>Science Center</option>
           <option>Natural History Museum</option><option>Art Museum</option>
           <option>Children's Museum</option><option>Other</option>
         </select>
       </div>
-      <div><label class="f-label">Tell us about your institution</label><textarea class="f-input f-textarea" placeholder="Annual visitors, exhibition challenges, what excites you about this model..."></textarea></div>
+      <div><label class="f-label">Tell us about your institution</label><textarea class="f-input f-textarea" name="message" placeholder="Annual visitors, exhibition challenges, what excites you about this model..."></textarea></div>
       <button type="submit" class="f-submit">Enter</button>
       <div id="form-success">Thank you — we'll be in touch soon.</div>
     </form>
